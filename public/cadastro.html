@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro | MedVet Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body class="auth-body">
+  <main class="auth-layout">
+    <section class="auth-brand-panel">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">🐾</span>
+        <span>MedVet Care</span>
+      </a>
+      <h1>Crie sua conta.</h1>
+      <p>Depois do cadastro você já pode registrar seu pet e abrir atendimentos online.</p>
+      <div class="feature-list">
+        <span>✅ Cadastro de pacientes</span>
+        <span>✅ Chat de triagem</span>
+        <span>✅ Teleatendimento</span>
+      </div>
+    </section>
+
+    <section class="auth-card">
+      <h2>Cadastro do tutor</h2>
+      <p class="muted">Preencha seus dados para acessar o sistema.</p>
+
+      <form id="cadastroForm" class="form">
+        <label>
+          Nome completo
+          <input type="text" name="nome" placeholder="Seu nome" required />
+        </label>
+
+        <label>
+          E-mail
+          <input type="email" name="email" placeholder="seuemail@email.com" required />
+        </label>
+
+        <label>
+          Telefone
+          <input type="text" name="telefone" placeholder="(11) 99999-9999" />
+        </label>
+
+        <label>
+          Senha
+          <input type="password" name="senha" placeholder="Mínimo 6 caracteres" required />
+        </label>
+
+        <button class="btn btn-primary full" type="submit">Criar conta</button>
+        <p id="message" class="form-message"></p>
+      </form>
+
+      <p class="auth-link">Já tem conta? <a href="./login.html">Entrar</a></p>
+    </section>
+  </main>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/cadastro.js"></script>
+</body>
+</html>

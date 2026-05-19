@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | MedVet Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="./dashboard.html">
+      <span class="brand-mark">🐾</span>
+      <span>MedVet Care</span>
+    </a>
+
+    <nav class="app-nav">
+      <a class="active" href="./dashboard.html">Dashboard</a>
+      <a href="./teleatendimento.html">Teleatendimento</a>
+      <a href="./chat.html">Chat IA</a>
+      <a id="adminLink" class="hidden" href="./admin.html">Admin</a>
+      <button class="btn btn-ghost btn-small" id="logoutBtn">Sair</button>
+    </nav>
+  </header>
+
+  <main class="app-shell">
+    <section class="welcome-card">
+      <div>
+        <p class="eyebrow">Painel do tutor</p>
+        <h1 id="welcomeTitle">Olá!</h1>
+        <p>Gerencie seus pets e acompanhe seus pedidos de atendimento.</p>
+      </div>
+      <a class="btn btn-primary" href="./teleatendimento.html">Abrir teleatendimento</a>
+    </section>
+
+    <section class="grid-2">
+      <article class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Paciente pet</p>
+            <h2>Cadastrar pet</h2>
+          </div>
+        </div>
+
+        <form id="petForm" class="form compact-form">
+          <label>Nome do pet
+            <input name="nome" placeholder="Ex: Thor" required>
+          </label>
+
+          <div class="form-row">
+            <label>Espécie
+              <select name="especie_id" id="especieSelect" required></select>
+            </label>
+
+            <label>Idade
+              <input type="number" name="idade" min="0" placeholder="Ex: 3">
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>Raça
+              <input name="raca" placeholder="Ex: SRD">
+            </label>
+
+            <label>Peso
+              <input type="number" step="0.1" name="peso" placeholder="Ex: 12.5">
+            </label>
+          </div>
+
+          <label>Sexo
+            <select name="sexo">
+              <option value="">Não informar</option>
+              <option>Macho</option>
+              <option>Fêmea</option>
+            </select>
+          </label>
+
+          <label>Observações
+            <textarea name="observacoes" rows="3" placeholder="Vacinas, alergias, comportamento..."></textarea>
+          </label>
+
+          <button class="btn btn-primary full" type="submit">Salvar pet</button>
+          <p id="petMessage" class="form-message"></p>
+        </form>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Meus pacientes</p>
+            <h2>Pets cadastrados</h2>
+          </div>
+        </div>
+
+        <div id="petsList" class="list-stack"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Histórico</p>
+          <h2>Meus relatos</h2>
+        </div>
+        <a class="btn btn-ghost btn-small" href="./chat.html">Usar Chat IA</a>
+      </div>
+
+      <div id="relatosList" class="list-stack"></div>
+    </section>
+  </main>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>

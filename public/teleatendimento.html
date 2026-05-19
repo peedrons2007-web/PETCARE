@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teleatendimento | MedVet Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="./dashboard.html">
+      <span class="brand-mark">🐾</span>
+      <span>MedVet Care</span>
+    </a>
+
+    <nav class="app-nav">
+      <a href="./dashboard.html">Dashboard</a>
+      <a class="active" href="./teleatendimento.html">Teleatendimento</a>
+      <a href="./chat.html">Chat IA</a>
+      <a id="adminLink" class="hidden" href="./admin.html">Admin</a>
+      <button class="btn btn-ghost btn-small" id="logoutBtn">Sair</button>
+    </nav>
+  </header>
+
+  <main class="app-shell">
+    <section class="welcome-card tele-hero">
+      <div>
+        <p class="eyebrow">Consulta online</p>
+        <h1>Abra uma sala de teleatendimento.</h1>
+        <p>Descreva o caso, gere a solicitação e entre na sala de vídeo.</p>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Novo atendimento</p>
+            <h2>Solicitar teleatendimento</h2>
+          </div>
+        </div>
+
+        <form id="teleForm" class="form">
+          <label>Pet
+            <select id="petSelect" name="paciente_id" required></select>
+          </label>
+
+          <label>O que está acontecendo?
+            <textarea name="descricao" rows="7" placeholder="Ex: Meu cachorro está vomitando desde ontem e não quer comer..." required></textarea>
+          </label>
+
+          <button class="btn btn-primary full" type="submit">Gerar sala de atendimento</button>
+          <p id="teleMessage" class="form-message"></p>
+        </form>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Sala atual</p>
+            <h2>Vídeo chamada</h2>
+          </div>
+        </div>
+
+        <div id="videoArea" class="video-placeholder">
+          <span>🎥</span>
+          <p>Quando você gerar ou abrir uma sala, a chamada aparece aqui.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Histórico</p>
+          <h2>Meus teleatendimentos</h2>
+        </div>
+      </div>
+
+      <div id="teleList" class="list-stack"></div>
+    </section>
+  </main>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/tele.js"></script>
+</body>
+</html>

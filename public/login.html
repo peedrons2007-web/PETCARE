@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | MedVet Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body class="auth-body">
+  <main class="auth-layout">
+    <section class="auth-brand-panel">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">🐾</span>
+        <span>MedVet Care</span>
+      </a>
+      <h1>Bem-vindo de volta.</h1>
+      <p>Acesse sua conta para cadastrar pets, abrir teleatendimento e usar a triagem inteligente.</p>
+
+      <div class="admin-hint">
+        <strong>Login admin:</strong>
+        <span>admin@medvet.com</span>
+        <span>admin123</span>
+      </div>
+    </section>
+
+    <section class="auth-card">
+      <h2>Entrar</h2>
+      <p class="muted">Use seu e-mail e senha cadastrados.</p>
+
+      <form id="loginForm" class="form">
+        <label>
+          E-mail
+          <input type="email" name="email" placeholder="seuemail@email.com" required />
+        </label>
+
+        <label>
+          Senha
+          <input type="password" name="senha" placeholder="Digite sua senha" required />
+        </label>
+
+        <button class="btn btn-primary full" type="submit">Entrar</button>
+        <p id="message" class="form-message"></p>
+      </form>
+
+      <p class="auth-link">Não tem conta? <a href="./cadastro.html">Cadastre-se</a></p>
+    </section>
+  </main>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | MedVet Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="./admin.html">
+      <span class="brand-mark">🐾</span>
+      <span>MedVet Admin</span>
+    </a>
+
+    <nav class="app-nav">
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./teleatendimento.html">Teleatendimento</a>
+      <a href="./chat.html">Chat IA</a>
+      <a class="active" href="./admin.html">Admin</a>
+      <button class="btn btn-ghost btn-small" id="logoutBtn">Sair</button>
+    </nav>
+  </header>
+
+  <main class="app-shell">
+    <section class="welcome-card admin-hero">
+      <div>
+        <p class="eyebrow">Painel administrativo</p>
+        <h1>Controle da clínica em tempo real.</h1>
+        <p>Acompanhe relatos, prioridades e salas de teleatendimento abertas.</p>
+      </div>
+    </section>
+
+    <section id="statsGrid" class="stats-grid"></section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Relatos</p>
+          <h2>Atendimentos registrados</h2>
+        </div>
+        <button class="btn btn-ghost btn-small" id="refreshBtn">Atualizar</button>
+      </div>
+      <div id="relatosAdmin" class="table-wrap"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Vídeo</p>
+          <h2>Teleatendimentos</h2>
+        </div>
+      </div>
+      <div id="teleAdmin" class="table-wrap"></div>
+    </section>
+  </main>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/admin.js"></script>
+</body>
+</html>

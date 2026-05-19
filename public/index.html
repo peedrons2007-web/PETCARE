@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedVet Care | Petshop & Telemedicina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark">🐾</span>
+      <span>MedVet Care</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+    <nav class="nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#tele">Telemedicina</a>
+      <a href="./login.html">Entrar</a>
+      <a class="btn btn-primary btn-small" href="./cadastro.html">Criar conta</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">Petshop + atendimento veterinário online</p>
+        <h1>Saúde animal com carinho, tecnologia e atendimento rápido.</h1>
+        <p class="hero-text">
+          Cadastre seu pet, abra um teleatendimento e converse com uma triagem inteligente
+          para entender a urgência do caso antes da consulta.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="./cadastro.html">Começar agora</a>
+          <a class="btn btn-ghost" href="./login.html">Já tenho conta</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>24h</strong><span>triagem simples</span></div>
+          <div><strong>100%</strong><span>sem Docker</span></div>
+          <div><strong>SQLite</strong><span>banco local</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card floating-card">
+        <div class="pet-orbit">
+          <span>🐶</span>
+          <span>🐱</span>
+          <span>🐰</span>
+          <span>🦜</span>
+        </div>
+
+        <div class="doctor-card">
+          <div class="doctor-avatar">MV</div>
+          <div>
+            <strong>Dr. MedVet Online</strong>
+            <span>Atendimento disponível</span>
+          </div>
+        </div>
+
+        <div class="triage-box">
+          <p>Triagem IA</p>
+          <h3>“Meu pet está vomitando.”</h3>
+          <span class="badge badge-danger">Prioridade Alta</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="section">
+      <div class="section-title">
+        <p class="eyebrow">Tudo em um só lugar</p>
+        <h2>Um sistema bonito para petshop moderno</h2>
+      </div>
+
+      <div class="cards-grid">
+        <article class="service-card">
+          <span class="icon-bubble">🩺</span>
+          <h3>Teleatendimento</h3>
+          <p>Abra solicitações, entre na sala de vídeo e acompanhe o status pelo painel.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="icon-bubble">🤖</span>
+          <h3>Chat IA simples</h3>
+          <p>Triagem rápida com prioridade sugerida e orientações iniciais para o tutor.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="icon-bubble">🐾</span>
+          <h3>Cadastro de pets</h3>
+          <p>Guarde nome, espécie, raça, idade, peso e observações importantes.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="icon-bubble">📊</span>
+          <h3>Painel admin</h3>
+          <p>Veja relatos, teleatendimentos e métricas principais da clínica.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tele" class="section split-section">
+      <div>
+        <p class="eyebrow">Telemedicina veterinária</p>
+        <h2>O tutor abre o chamado. O admin acompanha tudo.</h2>
+        <p>
+          O fluxo foi pensado para portfólio e para apresentação de PIM: simples,
+          visualmente forte e conectado com banco SQLite.
+        </p>
+        <a class="btn btn-primary" href="./login.html">Acessar sistema</a>
+      </div>
+
+      <div class="timeline-card">
+        <div><span>1</span><p>Tutor cadastra o pet</p></div>
+        <div><span>2</span><p>Descreve sintomas</p></div>
+        <div><span>3</span><p>IA sugere prioridade</p></div>
+        <div><span>4</span><p>Admin acompanha o atendimento</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>MedVet Care © 2026 — projeto acadêmico de telemedicina pet.</p>
+  </footer>
+
+  <script>
+    document.querySelector(".menu-toggle").addEventListener("click", () => {
+      document.querySelector(".nav").classList.toggle("is-open");
+    });
+  </script>
+</body>
+</html>

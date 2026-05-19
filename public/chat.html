@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat IA | MedVet Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="./dashboard.html">
+      <span class="brand-mark">🐾</span>
+      <span>MedVet Care</span>
+    </a>
+
+    <nav class="app-nav">
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./teleatendimento.html">Teleatendimento</a>
+      <a class="active" href="./chat.html">Chat IA</a>
+      <a id="adminLink" class="hidden" href="./admin.html">Admin</a>
+      <button class="btn btn-ghost btn-small" id="logoutBtn">Sair</button>
+    </nav>
+  </header>
+
+  <main class="app-shell chat-shell">
+    <section class="chat-panel">
+      <div class="chat-header">
+        <div>
+          <p class="eyebrow">Atendimento rápido</p>
+          <h1>Chat IA de triagem</h1>
+        </div>
+        <span class="badge badge-info">IA simples</span>
+      </div>
+
+      <div id="chatMessages" class="chat-messages">
+        <div class="message bot">
+          <strong>MedVet IA</strong>
+          <p>Oi! Me conte o que está acontecendo com seu pet. Exemplo: “meu gato está vomitando e não quer comer”.</p>
+        </div>
+      </div>
+
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" placeholder="Digite sua dúvida..." autocomplete="off" required />
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <aside class="panel tips-panel">
+      <h2>Dicas para uma boa triagem</h2>
+      <ul class="tips-list">
+        <li>Informe espécie, idade e sintomas.</li>
+        <li>Diga quando começou.</li>
+        <li>Fale se comeu, bebeu água ou mudou o comportamento.</li>
+        <li>Em emergência real, procure atendimento presencial.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/chat.js"></script>
+</body>
+</html>
